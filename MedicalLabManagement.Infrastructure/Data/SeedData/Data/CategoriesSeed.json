@@ -1,0 +1,32 @@
+[
+  {
+    "Code": "HEM-01",
+    "EnName": "Hematology",
+    "ArName": "تحاليل الدم",
+    "Description": "Blood tests including CBC, Hemoglobin, WBC, Platelets..."
+  },
+  {
+    "Code": "CHE-01",
+    "EnName": "Chemistry",
+    "ArName": "التحاليل الكيميائية",
+    "Description": "Clinical chemistry tests including Sugar, Liver, Kidney functions..."
+  },
+  {
+    "Code": "MIC-01",
+    "EnName": "Microbiology",
+    "ArName": "الميكروبيولوجي",
+    "Description": "Tests for bacteria, viruses, and other microorganisms."
+  },
+  {
+    "Code": "HOR-01",
+    "EnName": "Hormones",
+    "ArName": "الهرمونات",
+    "Description": "Tests related to endocrine system hormones."
+  },
+  {
+    "Code": "IMM-01",
+    "EnName": "Immunology",
+    "ArName": "المناعة",
+    "Description": "Tests related to immune system including antibodies."
+  }
+]

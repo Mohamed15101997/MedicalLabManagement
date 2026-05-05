@@ -1,8 +1,4 @@
-﻿using MedicalLabManagement.Domin.Entities;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection;
-
-namespace MedicalLabManagement.Infrastructure.Data.Contexts
+﻿namespace MedicalLabManagement.Infrastructure.Persistence.Contexts
 {
 	public class ApplicationDbContext : DbContext
 	{

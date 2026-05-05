@@ -1,8 +1,4 @@
-﻿using MedicalLabManagement.Domin.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace MedicalLabManagement.Infrastructure.Data.Configurations
+﻿namespace MedicalLabManagement.Infrastructure.Persistence.Configurations
 {
 	public class TestConfigurations : IEntityTypeConfiguration<Test>
 	{
@@ -25,7 +21,7 @@ namespace MedicalLabManagement.Infrastructure.Data.Configurations
 
 			// RelationsShips
 			builder.HasOne(x => x.Category)
-				.WithMany()
+				.WithMany(x => x.Tests)
 				.HasForeignKey(x => x.CategoryId)
 				.OnDelete(DeleteBehavior.SetNull);
 		}

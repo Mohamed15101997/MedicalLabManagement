@@ -1,6 +1,4 @@
-﻿using MedicalLabManagement.Domin.Enums;
-
-namespace MedicalLabManagement.Domin.Entities
+﻿namespace MedicalLabManagement.Domin.Entities
 {
 	public class Test : BaseEntity
 	{

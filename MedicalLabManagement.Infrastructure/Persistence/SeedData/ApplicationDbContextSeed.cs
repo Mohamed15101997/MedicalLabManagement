@@ -1,9 +1,4 @@
-﻿using MedicalLabManagement.Domin.Entities;
-using MedicalLabManagement.Infrastructure.Data.Contexts;
-using System.Text.Json;
-using System.Threading.Tasks;
-
-namespace MedicalLabManagement.Infrastructure.Data.SeedData
+﻿namespace MedicalLabManagement.Infrastructure.Persistence.SeedData
 {
 	public class ApplicationDbContextSeed
 	{
@@ -12,7 +7,7 @@ namespace MedicalLabManagement.Infrastructure.Data.SeedData
 			// Category
 			if (!context.Categories.Any()) 
 			{
-				var categoriesData = File.ReadAllText(@"..\MedicalLabManagement.Infrastructure\Data\SeedData\Data\CategoriesSeed.json");
+				var categoriesData = File.ReadAllText(@"..\MedicalLabManagement.Infrastructure\Persistence\SeedData\Data\CategoriesSeed.json");
 
 				var categories = JsonSerializer.Deserialize<List<Category>>(categoriesData);
 

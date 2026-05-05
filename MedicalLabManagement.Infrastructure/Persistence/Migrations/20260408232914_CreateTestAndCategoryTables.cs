@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MedicalLabManagement.Infrastructure.Data.Migrations
+namespace MedicalLabManagement.Infrastructure.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class AddTestAndCategoryTables : Migration
+    public partial class CreateTestAndCategoryTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

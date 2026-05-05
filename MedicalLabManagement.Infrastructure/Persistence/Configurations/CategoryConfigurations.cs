@@ -1,8 +1,4 @@
-﻿using MedicalLabManagement.Domin.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace MedicalLabManagement.Infrastructure.Data.Configurations
+﻿namespace MedicalLabManagement.Infrastructure.Persistence.Configurations
 {
 	public class CategoryConfigurations : IEntityTypeConfiguration<Category>
 	{

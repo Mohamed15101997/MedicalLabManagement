@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MedicalLabManagement.Application\MedicalLabManagement.Application.csproj" />
     <ProjectReference Include="..\MedicalLabManagement.Domin\MedicalLabManagement.Domin.csproj" />
     <ProjectReference Include="..\MedicalLabManagement.Infrastructure\MedicalLabManagement.Infrastructure.csproj" />

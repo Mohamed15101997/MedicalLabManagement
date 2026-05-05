@@ -1,9 +1,4 @@
-﻿using MedicalLabManagement.Infrastructure.Data.Contexts;
-using MedicalLabManagement.Infrastructure.Data.SeedData;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-
-namespace MedicalLabManagement.Api.Helper
+﻿namespace MedicalLabManagement.Api.Helper
 {
 	public static class DatabaseExtensions
 	{

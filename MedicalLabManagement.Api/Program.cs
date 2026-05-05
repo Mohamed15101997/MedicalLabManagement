@@ -1,7 +1,3 @@
-
-using MedicalLabManagement.Api.Helper;
-using MedicalLabManagement.Infrastructure;
-
 namespace MedicalLabManagement.Api
 {
     public class Program
@@ -10,18 +6,24 @@ namespace MedicalLabManagement.Api
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add Infrastructure
-            builder.Services.AddInfrastructure(builder.Configuration);
-
 			// Add services to the container.
 			builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
+
+			// Add Infrastructure && Add Application
+			builder.Services
+				.AddInfrastructure(builder.Configuration)
+				.AddApplication();
+
+			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+			builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
 
 			await app.ApplyDatabaseSetupAsync();
+
+
+			app.UseMiddleware<ExceptionMiddleware>();
 
 			// Configure the HTTP request pipeline.
 			if (app.Environment.IsDevelopment())
@@ -30,10 +32,11 @@ namespace MedicalLabManagement.Api
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
+			app.UseStatusCodePagesWithReExecute("/error/{0}");
+
+			app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
